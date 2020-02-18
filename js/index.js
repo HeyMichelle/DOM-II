@@ -13,7 +13,6 @@ navHov.forEach(function(anchor){
     })
 })
 
-
 // click event, applied to multiple example
 document.querySelectorAll("h2").forEach((el) => {
     el.addEventListener("click", function() {
@@ -161,3 +160,19 @@ stopTheLink.addEventListener('click', (event) => {
       event.preventDefault();
     }
   })
+
+
+//   stretch
+const advImg = document.querySelector(".img-fluid-rounded");
+
+gsap.to(advImg, {
+    duration: 4, 
+    y: 100,
+    ease: "elastic", 
+});
+// how to return to original position?
+gsap.to(advImg, {
+    duration: 5, 
+    y: -90,
+    ease: "elastic", 
+});
